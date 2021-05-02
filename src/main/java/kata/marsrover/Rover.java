@@ -67,12 +67,12 @@ public class Rover implements EnvironmentAware {
         return position;
     }
 
-    private boolean addSuccessfulReport() {
-        return walkReports.add(new WalkReport(true, null));
+    private void addSuccessfulReport() {
+        walkReports.add(new WalkReport(true, null));
     }
 
-    private boolean addFaillingReport(ThingAt thingAt) {
-        return walkReports.add(new WalkReport(false, thingAt));
+    private void addFaillingReport(ThingAt thingAt) {
+        walkReports.add(new WalkReport(false, thingAt));
     }
 
     private Thing detectThing(Position plannedPosition) {
